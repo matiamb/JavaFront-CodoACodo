@@ -1,3 +1,14 @@
 .navbar {
     background-color: #404040;
 }
+
+.fondo1 {
+    height: 600px;
+}
+
+.texto1 {
+    margin-right: 75px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+}
