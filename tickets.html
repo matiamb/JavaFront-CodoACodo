@@ -54,20 +54,35 @@
     <h1 class="text-center">VALOR DEL TICKET $2000</h1>
     <div class="d-flex justify-content-center">
         <form action="/action_page.php" style="width: 50%;">
-            <div class="mb-3 mt-3">
-                <input type="nombre" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
-            </div>
-            <div class="mb-3">
-                <input type="apellido" class="form-control" id="apellido" placeholder="Apellido" name="apellido">
+            <div class="row align-items-end gap-3">
+                <div class=" col mb-3 mt-3">
+                    <input type="nombre" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
+                </div>
+                <div class=" col mb-3">
+                    <input type="apellido" class="form-control" id="apellido" placeholder="Apellido" name="apellido">
+                </div>
             </div>
             <div class="mb-3">
                 <input type="email" class="form-control" id="email" placeholder="Email" name="email">
             </div>
-            <div class="mb-3">
-                <input type="cantidad" class="form-control" id="tkts" placeholder="Cantidad" name="tkts">
+            <div class="row gap-3">
+                <div class="col mb-3">
+                    <input type="cantidad" class="form-control" id="tkts" placeholder="Cantidad" name="tkts">
+                </div>
+                <select class="col form-select mb-3" aria-label="Default select example">
+                    <option selected>Categoria</option>
+                    <option value="1">Estudiante</option>
+                    <option value="2">Trainee</option>
+                    <option value="3">Junior</option>
+                </select>
             </div>
-            <button type="borrar" class="btn btn-primary">Borrar</button>
-            <button type="resumen" class="btn btn-primary">Resumen</button>
+            <div class="totalcontainer border border-primary rounded p-3">
+                <div>Total a pagar: $</div>
+            </div>
+            <div class="d-flex justify-content-evenly m-3">
+                <button class="btn btn-primary" style="width: 250px;">Borrar</button>
+                <button class="btn btn-primary" style="width: 250px;">Resumen</button>
+            </div>
         </form>
     </div>
 
