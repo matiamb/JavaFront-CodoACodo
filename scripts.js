@@ -15,6 +15,7 @@ const cantidadtkts = document.getElementById('tkts');
 const totalAPagar = document.getElementById('totalapagar');
 const btnResumen = document.getElementById('btnresumen');
 const btnBorrar = document.getElementById('btnborrar');
+const btnComprar = document.getElementById('btncompra');
 const nombre = document.getElementById('nombre');
 const apellido = document.getElementById('apellido');
 const email = document.getElementById('email');
@@ -40,6 +41,7 @@ function precio() {
     //aplique de descuentos
     else if (parseInt(cantidadtkts.value) > 0) {
         totalAPagar.style.backgroundColor = '#29BBFF';
+        btnComprar.style.visibility = 'visible';
         switch(categoriaDesc.value){
             case 'estudiante':
                 total -= total*estudiante;
@@ -69,6 +71,8 @@ function borrarForm(){
     email.value = '';
     cantidadtkts.value = '';
     totalAPagar.textContent = 'Total a pagar: $'
+    totalAPagar.style.backgroundColor = '#29BBFF';
+    btnComprar.style.visibility = 'hidden';
 }
 
 //e.preventdefault es para evitar la funcion por default de los forms de enviar lo del form al backend
@@ -77,3 +81,5 @@ precio()});
 
 btnBorrar.addEventListener('click', (e)=>{e.preventDefault()
     borrarForm()});
+
+btnComprar.addEventListener('click', (e)=>{e.preventDefault()});
