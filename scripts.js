@@ -14,6 +14,7 @@ const categoriaDesc= document.getElementById('categoriadesc');
 const cantidadtkts = document.getElementById('tkts');
 const totalAPagar = document.getElementById('totalapagar');
 const btnResumen = document.getElementById('btnresumen');
+const btnBorrar = document.getElementById('btnborrar');
 const nombre = document.getElementById('nombre');
 const apellido = document.getElementById('apellido');
 const email = document.getElementById('email');
@@ -61,6 +62,18 @@ function precio() {
         totalAPagar.textContent = 'La cantidad de tickets no puede ser cero';
         totalAPagar.style.backgroundColor = 'red';}
 }
+
+function borrarForm(){
+    nombre.value = '';
+    apellido.value = '';
+    email.value = '';
+    cantidadtkts.value = '';
+    totalAPagar.textContent = 'Total a pagar: $'
+}
+
 //e.preventdefault es para evitar la funcion por default de los forms de enviar lo del form al backend
 btnResumen.addEventListener('click', (e)=>{e.preventDefault()
 precio()});
+
+btnBorrar.addEventListener('click', (e)=>{e.preventDefault()
+    borrarForm()});
